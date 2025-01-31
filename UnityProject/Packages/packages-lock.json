@@ -227,13 +227,12 @@
       "url": "https://package.openupm.com"
     },
     "leap.forward.unity.common": {
-      "version": "https://github.com/lpfd/unity-common.git",
+      "version": "file:../../Modules/Common",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.0.2"
-      },
-      "hash": "003e2b0f7af0c4b678f7d77542c58f7d66ae5af4"
+      }
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
