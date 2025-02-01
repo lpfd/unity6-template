@@ -1,30 +1,35 @@
 using Leap.Forward;
 using Leap.Forward.LightInject;
+using System;
 using UnityEngine;
+using VContainer;
+using VContainer.Unity;
 
 namespace Game
 {
     public class Bootstraper : BootstraperBase
     {
-        IServiceContainer _service;
-        private IGameStateMachine _stateMachine;
-
         public CanvasGroup _fadeCanvas;
 
         public float _fadeDuration = 0.5f;
 
-        public Bootstraper()
+        protected override void Configure(IContainerBuilder builder)
         {
-            _service = new ServiceContainer();
+            base.Configure(builder);
 
-            _service
-                .WithSelf()
-                .WithBootstraper(this)
+            builder
+                //.WithSelf()
+                //.WithBootstraper(this)
                 .WithSceneLoader()
                 .WithGameStateMachine()
-                .WithGameState<MainMenuState>();
-
-            _stateMachine = _service.GetInstance<IGameStateMachine>();
+                .WithGameState<MainMenuState>()
+                .WithFadeTransition(_fadeCanvas, _fadeDuration)
+                .WithEntryPoint(OnStart);
+        }
+       
+        private void OnStart()
+        {
+            Container.Resolve<IGameStateMachine>().Enter<MainMenuState>();
         }
 
         public override void Awake()
@@ -32,10 +37,6 @@ namespace Game
             base.Awake();
 
             DontDestroyOnLoad(_fadeCanvas.gameObject);
-
-            _service.WithFadeTransition(_fadeCanvas, _fadeDuration);
-
-            _stateMachine.Enter<MainMenuState>();
         }
     }
 }
