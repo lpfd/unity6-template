@@ -44,5 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76c6c582421677429f4099c460f4da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bootstraperPrefab: {fileID: 4255845144669960197, guid: 575c76af1250a834fbaab19485287ea8,
-    type: 3}
+  parentReference:
+    TypeName: Game.Bootstraper
+  autoRun: 0
+  autoInjectGameObjects: []
+  _bootstraperPrefab: {fileID: 4255845144669960197, guid: 575c76af1250a834fbaab19485287ea8, type: 3}
