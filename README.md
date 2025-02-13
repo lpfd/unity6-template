@@ -41,3 +41,37 @@ Click "Choose..." to select where on your computer you want to clone the reposit
 Click the blue "Clone" button. GitHub Desktop will clone the repository to the selected location on your computer.
 
 ![github-desktop-clone](Documentation/Images/github-desktop-clone.png)
+
+## Setting up git LFS
+
+Open command prompt for the cloned repository.
+
+![github-desktop-command-prompt](Documentation/Images/github-desktop-command-prompt.png)
+
+Initialize Git LFS:
+
+```bash
+git lfs install
+```
+
+Create or update the ```.gitattributes``` file in your project's root directory with the following content: https://gist.github.com/Srfigie/77b5c15bc5eb61733a74d34d10b3ed87
+
+
+This configuration ensures that:
+
+- Text-based files like scripts (*.cs) and shaders (*.shader) are handled as text.
+- Unity YAML files (*.mat, *.anim, *.unity, etc.) are set up for proper merging.
+- Binary assets such as images, audio, and 3D models are tracked by Git LFS.
+
+Inform Git LFS to track the specified file types:
+
+```bash
+git lfs track "*.jpg" "*.jpeg" "*.png" "*.gif" "*.psd" "*.ai" "*.tif" "*.mp3" "*.wav" "*.ogg" "*.mp4" "*.mov" "*.FBX" "*.fbx" "*.blend" "*.obj" "*.a" "*.exr" "*.tga" "*.pdf" "*.zip" "*.dll" "*.unitypackage" "*.aif" "*.ttf" "*.rns" "*.reason" "*.lxo"
+```
+
+Stage the .gitattributes file and any other changes, then commit them:
+
+![github-desktop-commit-lfs](Documentation/Images/github-desktop-commit-lfs.png)
+
+![github-desktop-push](Documentation/Images/github-desktop-push.png)
+
