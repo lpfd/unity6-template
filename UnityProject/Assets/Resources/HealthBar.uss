@@ -1,0 +1,11 @@
+.health-bar-container {
+    width: 200px;
+    height: 20px;
+    background-color: grey;
+}
+
+.health-bar {
+    height: 100%;
+    background-color: green;
+    width: 100%; /* This will be adjusted based on health percentage */
+}

@@ -32,7 +32,7 @@ namespace Game
                 Container.Resolve<IGameStateMachine>().Enter(InitialGameState.Type);
         }
 
-        public override void Awake()
+        protected override void Awake()
         {
             base.Awake();
 
