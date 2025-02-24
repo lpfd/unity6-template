@@ -1,9 +1,7 @@
 using Leap.Forward;
 using Leap.Forward.LightInject;
-using System;
 using UnityEngine;
 using VContainer;
-using VContainer.Unity;
 
 namespace Game
 {
@@ -23,13 +21,15 @@ namespace Game
                 .WithSceneLoader()
                 .WithGameStateMachine()
                 .WithGameState<MainMenuState>()
+                .WithGameState<GameSceneState>()
                 .WithFadeTransition(_fadeCanvas, _fadeDuration)
                 .WithEntryPoint(OnStart);
         }
        
         private void OnStart()
         {
-            Container.Resolve<IGameStateMachine>().Enter<MainMenuState>();
+            if (InitialGameState.Type != null)
+                Container.Resolve<IGameStateMachine>().Enter(InitialGameState.Type);
         }
 
         public override void Awake()

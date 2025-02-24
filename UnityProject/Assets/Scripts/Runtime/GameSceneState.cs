@@ -3,20 +3,20 @@ using Leap.Forward;
 namespace Game
 {
     /// <summary>
-    /// Main menu state. Displays main menu.
+    /// Game screen state. Displays game scene.
     /// </summary>
-    public class MainMenuState : IGameState
+    public class GameSceneState : IGameState
     {
         private readonly ISceneLoader _sceneLoader;
 
-        public MainMenuState(ISceneLoader sceneLoader)
+        public GameSceneState(ISceneLoader sceneLoader)
         {
             _sceneLoader = sceneLoader;
         }
 
         public void Enter()
         {
-            _sceneLoader.Load("MainMenu");
+            _sceneLoader.Load("GameScreen");
         }
 
         public void Exit()
