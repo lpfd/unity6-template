@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Style.uss?fileID=7433441132597879392&amp;guid=ac62ddc65fcf22b4892a60c49133487b&amp;type=3#Style" />
+    <engine:ProgressBar value="22" title="health" name="Health" data-source-path="_health" style="transition-property: all; transition-duration: 0s; transition-timing-function: ease; transition-delay: 0s;">
+        <Bindings>
+            <engine:DataBinding property="value" data-source-path="_health" data-source="project://database/Assets/ViewModel/CharacterStats.asset?fileID=11400000&amp;guid=aee8f905e12e3364db164771b1f18410&amp;type=2#CharacterStats" binding-mode="ToTarget" />
+            <engine:DataBinding property="highValue" data-source-path="_maxHealth" data-source="project://database/Assets/ViewModel/CharacterStats.asset?fileID=11400000&amp;guid=aee8f905e12e3364db164771b1f18410&amp;type=2#CharacterStats" binding-mode="ToTarget" />
+        </Bindings>
+    </engine:ProgressBar>
+    <engine:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
+        <engine:Button text="Damage" name="DamageButton" />
+        <engine:Button text="Heal&#x9;" name="HealButton" />
+        <engine:Button text="Back To Menu" name="MenuButton" />
+    </engine:VisualElement>
+</engine:UXML>

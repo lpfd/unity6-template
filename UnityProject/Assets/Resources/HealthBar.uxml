@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ui:UXML xmlns:ui="UnityEngine.UIElements">
-    <ui:VisualElement name="healthBarContainer" class="health-bar-container">
-        <ui:VisualElement name="healthBar" class="health-bar"/>
-    </ui:VisualElement>
-</ui:UXML>
