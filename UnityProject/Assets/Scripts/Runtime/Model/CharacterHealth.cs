@@ -1,14 +1,17 @@
-using Game.ViewModel;
+using Leap.Forward.Composition;
+using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Game.Model
 {
-    public class CharacterHealth : MonoBehaviour
+    public partial class CharacterHealth : ModuleBase<Character>
     {
-        public CharacterStats _charaterStats;
+        public float _health = 100;
 
-        public delegate void HealthChanged(float currentHealth, float maxHealth);
-        public event HealthChanged OnHealthChanged;
+        public float _maxHealth = 100;
+
+        public event Action OnHealthChanged;
 
         private void Awake()
         {
@@ -16,14 +19,24 @@ namespace Game.Model
 
         public void TakeDamage(float amount)
         {
-            _charaterStats._health = Mathf.Clamp(_charaterStats._health - amount, 0, _charaterStats._maxHealth);
-            OnHealthChanged?.Invoke(_charaterStats._health, _charaterStats._maxHealth);
+            var prevValue = _health;
+            _health = Mathf.Clamp(_health - amount, 0, _maxHealth);
+            if (prevValue != _health)
+            {
+                OnHealthChanged?.Invoke();
+            }
         }
 
         public void Heal(float amount)
         {
-            _charaterStats._health = Mathf.Clamp(_charaterStats._health + amount, 0, _charaterStats._maxHealth);
-            OnHealthChanged?.Invoke(_charaterStats._health, _charaterStats._maxHealth);
+            var prevValue = _health;
+            _health = Mathf.Clamp(_health + amount, 0, _maxHealth);
+            if (prevValue != _health)
+            {
+                OnHealthChanged?.Invoke();
+            }
         }
     }
+
+
 }

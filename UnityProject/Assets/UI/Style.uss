@@ -1,0 +1,9 @@
+/* Style for the Health progress bar */
+#Health .unity-progress-bar__progress {
+    background-color: green;
+}
+
+/* Style for the Mana progress bar */
+#Mana .unity-progress-bar__progress {
+    background-color: blue;
+}
