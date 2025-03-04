@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 
 namespace Game
 {
-
     [RequireComponent(typeof(UIDocument))]
     public partial class CharacterPanelController : ModuleBase<Character>
     {
