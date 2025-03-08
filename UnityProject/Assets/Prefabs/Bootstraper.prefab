@@ -205,6 +205,6 @@ MonoBehaviour:
   autoInjectGameObjects: []
   InitialGameState:
     TypeName: Game.MainMenuState
-  InitialGameState2: 
   _fadeCanvas: {fileID: 5815776154434560080}
   _fadeDuration: 0.5
+  _saveFileSlots: {fileID: 11400000, guid: 6e94721ea7e583c4db68a9b1a36a010a, type: 2}

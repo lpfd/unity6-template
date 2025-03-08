@@ -1,3 +1,4 @@
+using Game.Model;
 using Leap.Forward;
 using Leap.Forward.LightInject;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace Game
 
         public float _fadeDuration = 0.5f;
 
+        public SaveFileSlots _saveFileSlots;
+
         protected override void Configure(IContainerBuilder builder)
         {
             base.Configure(builder);
@@ -21,6 +24,7 @@ namespace Game
                 .WithSceneLoader()
                 .WithPrefabManager()
                 .WithUIManager()
+                .WithSaveManager()
                 .WithGameStateMachine()
                 .WithGameState<MainMenuState>()
                 .WithGameState<GameSceneState>()
@@ -30,6 +34,8 @@ namespace Game
        
         private void OnStart()
         {
+            Container.Inject(_saveFileSlots);
+
             if (InitialGameState.Type != null)
                 Container.Resolve<IGameStateMachine>().Enter(InitialGameState.Type);
         }

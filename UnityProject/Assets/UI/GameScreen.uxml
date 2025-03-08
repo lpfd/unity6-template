@@ -3,6 +3,9 @@
     <engine:VisualElement style="flex-grow: 1; align-items: center; justify-content: center;">
         <engine:Button text="Damage" name="DamageButton" />
         <engine:Button text="Heal&#x9;" name="HealButton" />
+        <engine:Button text="Save To Slot 0" name="Slot0Button" />
+        <engine:Button text="Save To Slot 1" name="Slot1Button" />
+        <engine:Button text="Save To Slot 2" name="Slot2Button" />
         <engine:Button text="Back To Menu" name="MenuButton" />
     </engine:VisualElement>
 </engine:UXML>

@@ -302,6 +302,54 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - _elementName: Slot0Button
+    _subscribers:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 6e94721ea7e583c4db68a9b1a36a010a, type: 2}
+          m_TargetAssemblyTypeName: Game.Model.SaveFileSlots, Game.Runtime
+          m_MethodName: LoadGame
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _elementName: Slot1Button
+    _subscribers:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 6e94721ea7e583c4db68a9b1a36a010a, type: 2}
+          m_TargetAssemblyTypeName: Game.Model.SaveFileSlots, Game.Runtime
+          m_MethodName: LoadGame
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - _elementName: Slot2Button
+    _subscribers:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 6e94721ea7e583c4db68a9b1a36a010a, type: 2}
+          m_TargetAssemblyTypeName: Game.Model.SaveFileSlots, Game.Runtime
+          m_MethodName: LoadGame
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &616745933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,12 +813,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8329479950580202597, guid: 2687c0aa5dbc29240b073758bb89b1e4, type: 3}
       propertyPath: autoInjectGameObjects.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8329479950580202597, guid: 2687c0aa5dbc29240b073758bb89b1e4, type: 3}
       propertyPath: 'autoInjectGameObjects.Array.data[0]'
       value: 
       objectReference: {fileID: 3112632566821228924}
+    - target: {fileID: 8329479950580202597, guid: 2687c0aa5dbc29240b073758bb89b1e4, type: 3}
+      propertyPath: 'autoInjectGameObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 616745930}
+    - target: {fileID: 8329479950580202597, guid: 2687c0aa5dbc29240b073758bb89b1e4, type: 3}
+      propertyPath: 'autoInjectGameObjects.Array.data[2]'
+      value: 
+      objectReference: {fileID: 420405165}
     - target: {fileID: 8959028199180359431, guid: 2687c0aa5dbc29240b073758bb89b1e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

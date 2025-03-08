@@ -1,9 +1,21 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
+    <engine:VisualElement name="VisualElement" style="flex-grow: 1; justify-content: center; align-items: center;">
         <engine:Label text="Load Game" style="font-size: 48px; -unity-font-style: bold;" />
-        <engine:Button text="Slot 1&#10;" name="Slot1Button" />
-        <engine:Button text="Slot 2" name="Slot2Button" />
-        <engine:Button text="Slot 3" name="Slot3Button" />
+        <engine:Button text="Slot 0&#10;" name="Slot0Button" enabled="true">
+            <Bindings>
+                <engine:DataBinding property="enabledSelf" data-source="project://database/Assets/SaveFileSlots.asset?fileID=11400000&amp;guid=6e94721ea7e583c4db68a9b1a36a010a&amp;type=2#SaveFileSlots" binding-mode="ToTarget" data-source-path="_hasSave0" />
+            </Bindings>
+        </engine:Button>
+        <engine:Button text="Slot 1" name="Slot1Button" enabled="true">
+            <Bindings>
+                <engine:DataBinding property="enabledSelf" data-source="project://database/Assets/SaveFileSlots.asset?fileID=11400000&amp;guid=6e94721ea7e583c4db68a9b1a36a010a&amp;type=2#SaveFileSlots" binding-mode="ToTarget" data-source-path="_hasSave1" />
+            </Bindings>
+        </engine:Button>
+        <engine:Button text="Slot 2" name="Slot2Button" enabled="true">
+            <Bindings>
+                <engine:DataBinding property="enabledSelf" data-source="project://database/Assets/SaveFileSlots.asset?fileID=11400000&amp;guid=6e94721ea7e583c4db68a9b1a36a010a&amp;type=2#SaveFileSlots" binding-mode="ToTarget" data-source-path="_hasSave2" />
+            </Bindings>
+        </engine:Button>
         <engine:Button text="Cancel&#10;" name="CancelButton" />
     </engine:VisualElement>
 </engine:UXML>

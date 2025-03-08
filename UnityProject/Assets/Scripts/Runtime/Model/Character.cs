@@ -1,8 +1,5 @@
 using Game.Model;
 using Leap.Forward.Composition;
-using System;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace Game
 {
