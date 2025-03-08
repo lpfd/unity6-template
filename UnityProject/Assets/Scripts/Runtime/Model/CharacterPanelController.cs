@@ -13,9 +13,9 @@ namespace Game
         private UIDocument _document;
         private ProgressBar _healthBar;
 
-        public override void SetupModules()
+        public override void SetupModule()
         {
-            base.SetupModules();
+            base.SetupModule();
 
             _healthManager = Container.HealthManager;
             _healthManager.OnHealthChanged += UpdatePanel;
@@ -24,6 +24,13 @@ namespace Game
             _healthBar = _document.rootVisualElement?.Q<ProgressBar>("Health");
 
             UpdatePanel();
+        }
+
+        public override void TearDownModule()
+        {
+            base.TearDownModule();
+
+            _healthManager.OnHealthChanged -= UpdatePanel;
         }
 
         private void UpdatePanel()

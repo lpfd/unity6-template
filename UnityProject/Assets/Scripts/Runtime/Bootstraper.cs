@@ -19,6 +19,8 @@ namespace Game
                 //.WithSelf()
                 //.WithBootstraper(this)
                 .WithSceneLoader()
+                .WithPrefabManager()
+                .WithUIManager()
                 .WithGameStateMachine()
                 .WithGameState<MainMenuState>()
                 .WithGameState<GameSceneState>()
