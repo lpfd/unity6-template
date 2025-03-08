@@ -3,6 +3,7 @@
     <engine:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
         <engine:Label text="Game Title" style="font-size: 48px; -unity-font-style: bold;" />
         <engine:Button text="Start Game&#10;" name="StartButton" />
+        <engine:Button text="Load Game&#10;" name="LoadButton" />
         <engine:Button text="Settings&#10;" name="SettingsButton" />
         <engine:Button text="Exit&#10;" name="ExitButton" />
     </engine:VisualElement>
